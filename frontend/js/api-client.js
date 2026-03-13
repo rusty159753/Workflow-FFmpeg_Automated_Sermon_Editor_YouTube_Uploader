@@ -12,7 +12,7 @@ const API_BASE = (() => {
   }
   // Production — set this to your Cloud Run service URL after deployment
   // Example: 'https://asp-api-abc123-uc.a.run.app'
-  return 'https://asp-api-REPLACE_WITH_CLOUD_RUN_URL.a.run.app';
+  return 'https://asp-api-843103771738.us-central1.run.app';
 })();
 
 /**
