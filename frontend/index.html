@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermon Upload | Automated Sermon Publisher</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Upload Sermon Recording</h1>
+      <p>Fill out the details below, select your video file(s), and click Upload.</p>
+    </header>
+
+    <!-- Error Alert -->
+    <div id="error-alert" class="alert alert-error" hidden></div>
+
+    <!-- Upload Form -->
+    <section id="upload-form-section">
+      <form id="upload-form" class="card">
+        <h2>Sermon Details</h2>
+
+        <div class="form-group">
+          <label for="sermonTitle">Sermon Title *</label>
+          <input type="text" id="sermonTitle" name="sermonTitle" required
+                 placeholder="e.g., The Good Shepherd">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sermonDate">Date *</label>
+            <input type="date" id="sermonDate" name="sermonDate" required>
+          </div>
+          <div class="form-group">
+            <label for="speaker">Speaker *</label>
+            <input type="text" id="speaker" name="speaker" required
+                   placeholder="e.g., Pastor John Smith">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="series">Series (optional)</label>
+          <input type="text" id="series" name="series"
+                 placeholder="e.g., Gospel of John">
+        </div>
+
+        <h2>Trim Points (Optional)</h2>
+        <p class="hint" style="margin-bottom: 1rem;">Leave blank to use the full recording. A 2-second buffer is automatically added.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="trimStart">Trim Start</label>
+            <input type="text" id="trimStart" name="trimStart"
+                   placeholder="HH:MM:SS" pattern="\d{1,2}:\d{2}:\d{2}">
+            <p class="hint">e.g., 0:02:30</p>
+          </div>
+          <div class="form-group">
+            <label for="trimEnd">Trim End</label>
+            <input type="text" id="trimEnd" name="trimEnd"
+                   placeholder="HH:MM:SS" pattern="\d{1,2}:\d{2}:\d{2}">
+            <p class="hint">e.g., 1:15:00</p>
+          </div>
+        </div>
+
+        <h2>Video File(s)</h2>
+
+        <div class="form-group">
+          <div id="file-drop" class="file-drop">
+            <p><strong>Click to select</strong> or drag &amp; drop video files here</p>
+            <p class="hint">MP4, MOV, MTS, M2TS &mdash; up to 10 GB per file</p>
+            <input type="file" id="file-input" accept="video/*" multiple>
+          </div>
+          <div id="file-list" class="file-list"></div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary">
+          Upload &amp; Process
+        </button>
+      </form>
+    </section>
+
+    <!-- Upload Progress -->
+    <section id="progress-section" hidden>
+      <div class="card">
+        <h2>Uploading</h2>
+        <p id="upload-status-text">Preparing upload...</p>
+        <div class="progress-bar-container">
+          <div id="upload-bar" class="progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline Progress -->
+    <section id="pipeline-section" hidden>
+      <div class="card">
+        <h2>Processing Pipeline</h2>
+        <p id="pipeline-status-text">Waiting for processing to start...</p>
+        <ul id="pipeline-steps" class="pipeline-steps"></ul>
+      </div>
+    </section>
+
+    <!-- Result -->
+    <section id="result-section" hidden>
+      <div class="card">
+        <h2>Complete!</h2>
+        <div class="alert alert-success">Your sermon has been published successfully.</div>
+        <div id="result-links" class="result-links"></div>
+        <br>
+        <button onclick="location.reload()" class="btn btn-secondary">Upload Another</button>
+      </div>
+    </section>
+
+    <footer>
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+  </div>
+
+  <script src="js/api-client.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/status.js"></script>
+</body>
+</html>

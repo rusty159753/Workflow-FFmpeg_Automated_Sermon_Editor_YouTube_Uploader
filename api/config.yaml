@@ -1,0 +1,65 @@
+# Google Cloud
+gcp_project_id: "your-project-id"
+gcs_bucket: "asp-staging-bucket"
+gcs_region: "us-central1"
+
+# Secrets (names in Secret Manager, not the values)
+secrets:
+  oauth_client_id: "oauth-client-id"
+  oauth_client_secret: "oauth-client-secret"
+  oauth_refresh_token: "oauth-refresh-token"
+
+# Google Drive folder IDs (populated after first run via create-drive-folders.js)
+drive:
+  root_folder_id: ""
+  intro_folder_id: ""
+  outro_folder_id: ""
+  output_folder_id: ""
+  logs_folder_id: ""
+
+# FFmpeg processing
+processing:
+  crossfade_duration: 1
+  target_lufs: -14
+  true_peak_dbtp: -1.0
+  output_resolution: "1920x1080"
+  video_crf: 18
+  audio_bitrate: "192k"
+  trim_buffer: 2
+
+# YouTube defaults
+youtube:
+  default_privacy: "unlisted"
+  default_category_id: "29"
+  description_footer: |
+    ---
+    Church Name
+    123 Main Street, Anytown, USA
+    https://example.com
+    Online Giving: https://example.com/give
+
+# Upload limits
+upload:
+  max_file_size_gb: 10
+  accepted_extensions:
+    - ".mp4"
+    - ".mov"
+    - ".mts"
+    - ".m2ts"
+
+# Feature flags
+features:
+  dry_run: false
+
+# Frontend origin (for CORS)
+frontend:
+  origin: "https://rusty159753.github.io"
+
+# Admin auth
+admin:
+  secret_name: "asp-admin-secret"
+
+# Cloud Run Job
+cloud_run:
+  worker_job_name: "asp-worker"
+  region: "us-central1"
