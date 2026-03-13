@@ -1,6 +1,6 @@
 # Google Cloud
-gcp_project_id: "your-project-id"
-gcs_bucket: "asp-staging-bucket"
+gcp_project_id: "automated-sermon-publisher"
+gcs_bucket: "asp-staging-automated-sermon-publisher"
 gcs_region: "us-central1"
 
 # Secrets (names in Secret Manager, not the values)
@@ -11,11 +11,11 @@ secrets:
 
 # Google Drive folder IDs (populated after first run via create-drive-folders.js)
 drive:
-  root_folder_id: ""
-  intro_folder_id: ""
-  outro_folder_id: ""
-  output_folder_id: ""
-  logs_folder_id: ""
+  root_folder_id: "1D34y-NhX1kdgel-0F30n5PbNANn3eke0"
+  intro_folder_id: "1oFtigjulJq4Z7XWiufFep-2QdiEkseX2"
+  outro_folder_id: "1PZu952xT38oT4ygDGld6WqD8Fp8D1yh3"
+  output_folder_id: "1UGqj4AWkLl8ObJqxF0LtuZgb4Da0rWZN"
+  logs_folder_id: "1R51mUdnUcZzXI-1AlI9bJox5JCvtos9R"
 
 # FFmpeg processing
 processing:
@@ -33,10 +33,7 @@ youtube:
   default_category_id: "29"
   description_footer: |
     ---
-    Church Name
-    123 Main Street, Anytown, USA
-    https://example.com
-    Online Giving: https://example.com/give
+    St. Seraphim of Sarov Orthodox Church Boise
 
 # Upload limits
 upload:
@@ -49,7 +46,7 @@ upload:
 
 # Feature flags
 features:
-  dry_run: false
+  dry_run: true
 
 # Frontend origin (for CORS)
 frontend:

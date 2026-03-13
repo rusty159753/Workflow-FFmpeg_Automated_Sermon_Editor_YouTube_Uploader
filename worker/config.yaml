@@ -11,18 +11,15 @@ processing:
   trim_buffer: 2
 
 drive:
-  root_folder_id: ""
-  intro_folder_id: ""
-  outro_folder_id: ""
-  output_folder_id: ""
-  logs_folder_id: ""
+  root_folder_id: "1D34y-NhX1kdgel-0F30n5PbNANn3eke0"
+  intro_folder_id: "1oFtigjulJq4Z7XWiufFep-2QdiEkseX2"
+  outro_folder_id: "1PZu952xT38oT4ygDGld6WqD8Fp8D1yh3"
+  output_folder_id: "1UGqj4AWkLl8ObJqxF0LtuZgb4Da0rWZN"
+  logs_folder_id: "1R51mUdnUcZzXI-1AlI9bJox5JCvtos9R"
 
 youtube:
   default_privacy: "unlisted"
   default_category_id: "29"
   description_footer: |
     ---
-    Church Name
-    123 Main Street, Anytown, USA
-    https://example.com
-    Online Giving: https://example.com/give
+    St. Seraphim of Sarov Orthodox Church Boise
