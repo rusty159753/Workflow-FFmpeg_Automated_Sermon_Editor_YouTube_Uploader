@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Automated Sermon Publisher</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>ASP Admin</h1>
+      <p>Manage assets, configuration, and dry-run mode.</p>
+    </header>
+
+    <!-- Login -->
+    <section id="login-section">
+      <form id="login-form" class="card">
+        <h2>Admin Login</h2>
+        <div class="form-group">
+          <label for="admin-token">Admin Token</label>
+          <input type="password" id="admin-token" name="admin-token" required
+                 placeholder="Enter your admin token">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+    </section>
+
+    <!-- Admin Content -->
+    <div id="admin-content" hidden>
+
+      <!-- Dry Run Toggle -->
+      <div class="card">
+        <h2>Dry Run Mode</h2>
+        <p style="margin-bottom: 0.75rem; color: var(--gray-500); font-size: 0.875rem;">
+          When enabled, the pipeline runs all processing steps but skips the actual YouTube upload and Drive archive.
+        </p>
+        <div class="toggle-row">
+          <span>Dry Run</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="dry-run-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Intro Asset -->
+      <div class="card">
+        <h2>Intro Video</h2>
+        <p id="intro-info" style="margin-bottom: 1rem;"><em>Loading...</em></p>
+        <form id="intro-upload-form">
+          <div class="form-group">
+            <input type="file" id="intro-file" accept="video/*" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Upload New Intro</button>
+        </form>
+      </div>
+
+      <!-- Outro Asset -->
+      <div class="card">
+        <h2>Outro Video</h2>
+        <p id="outro-info" style="margin-bottom: 1rem;"><em>Loading...</em></p>
+        <form id="outro-upload-form">
+          <div class="form-group">
+            <input type="file" id="outro-file" accept="video/*" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Upload New Outro</button>
+        </form>
+      </div>
+
+      <!-- Config Display -->
+      <div class="card">
+        <h2>Current Configuration</h2>
+        <table style="width: 100%; font-size: 0.875rem;">
+          <tbody id="config-display">
+            <tr><td colspan="2"><em>Loading...</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Logout -->
+      <button id="logout-btn" class="btn btn-secondary" style="margin-top: 1rem;">
+        Sign Out
+      </button>
+
+    </div>
+
+    <footer>
+      <a href="index.html">Upload Page</a> &middot;
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+  </div>
+
+  <script src="js/api-client.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

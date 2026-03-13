@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Automated Sermon Publisher</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Privacy Policy</h1>
+      <p>Automated Sermon Publisher (ASP)</p>
+    </header>
+
+    <div class="card">
+      <h2>What This Application Does</h2>
+      <p>
+        The Automated Sermon Publisher (ASP) helps church volunteers upload, process, and publish
+        sermon recordings. It processes video files and uploads them to YouTube and Google Drive
+        on behalf of the church.
+      </p>
+
+      <h2 style="margin-top: 1.5rem;">Data We Collect</h2>
+      <p>ASP collects only the data you provide through the upload form:</p>
+      <ul style="margin: 0.75rem 0; padding-left: 1.5rem;">
+        <li>Sermon title, date, and speaker name</li>
+        <li>Video file(s) of the sermon recording</li>
+        <li>Optional: series name, trim start/end times</li>
+      </ul>
+      <p>We do not collect personal information about visitors or volunteers beyond what is
+         needed to process the upload.</p>
+
+      <h2 style="margin-top: 1.5rem;">How We Use Your Data</h2>
+      <ul style="margin: 0.75rem 0; padding-left: 1.5rem;">
+        <li>Video files are temporarily stored in Google Cloud Storage during processing</li>
+        <li>Processed videos are uploaded to the church's YouTube channel</li>
+        <li>Processed videos are archived to the church's Google Drive</li>
+        <li>Temporary files are automatically deleted after processing completes</li>
+      </ul>
+
+      <h2 style="margin-top: 1.5rem;">Google API Usage</h2>
+      <p>
+        This application uses Google APIs (YouTube Data API v3 and Google Drive API) to publish
+        and archive sermon recordings. The application's use and transfer of information received
+        from Google APIs adheres to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy"
+           target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+        including the Limited Use requirements.
+      </p>
+
+      <h2 style="margin-top: 1.5rem;">Data Retention</h2>
+      <ul style="margin: 0.75rem 0; padding-left: 1.5rem;">
+        <li>Upload staging files: deleted automatically within 7 days</li>
+        <li>Job metadata: retained for 30 days for troubleshooting, then deleted</li>
+        <li>Published YouTube videos: retained per the church's YouTube channel policies</li>
+        <li>Google Drive archives: retained per the church's Drive storage policies</li>
+      </ul>
+
+      <h2 style="margin-top: 1.5rem;">Third-Party Services</h2>
+      <ul style="margin: 0.75rem 0; padding-left: 1.5rem;">
+        <li>Google Cloud Platform (processing infrastructure)</li>
+        <li>YouTube (video publishing)</li>
+        <li>Google Drive (video archiving)</li>
+        <li>GitHub Pages (frontend hosting)</li>
+      </ul>
+
+      <h2 style="margin-top: 1.5rem;">Contact</h2>
+      <p>
+        For questions about this privacy policy or to request data deletion,
+        contact the church administration.
+      </p>
+
+      <p style="margin-top: 1.5rem; color: var(--gray-500); font-size: 0.875rem;">
+        Last updated: March 2026
+      </p>
+    </div>
+
+    <footer>
+      <a href="index.html">Upload Page</a> &middot;
+      <a href="admin.html">Admin</a>
+    </footer>
+
+  </div>
+</body>
+</html>
