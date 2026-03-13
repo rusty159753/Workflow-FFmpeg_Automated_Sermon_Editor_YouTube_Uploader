@@ -17,9 +17,11 @@ function createApp() {
 
   app.use(express.json({ limit: '1mb' }));
 
+  // Rate limit: 120 requests per minute per IP
+  // Status polling runs every 5s (~12/min), plus uploads and admin calls
   app.use(rateLimit({
     windowMs: 60 * 1000,
-    max: 10,
+    max: 120,
     standardHeaders: true,
     legacyHeaders: false,
     message: { error: 'Too many requests. Please try again later.' },
